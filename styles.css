@@ -1,0 +1,36 @@
+@font-face {
+	font-family: "Keep Calm";
+    src: url(fonts/KeepCalm-Medium.ttf);
+}
+
+* {
+	font-family: "Keep Calm";
+	background: url("worn_dots.png");
+}
+
+div {
+	display: block;
+	left: 50%;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#crown {
+	margin-top: 30px;
+}
+
+#crown>img {
+	width: 200px;
+}
+
+p {
+	margin: 10px;
+}
+
+.big {
+	font-size: 3em;
+}
+
+.small {
+	font-size: 1.5em;
+}
