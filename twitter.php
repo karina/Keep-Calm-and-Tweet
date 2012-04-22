@@ -15,6 +15,9 @@ foreach($object->results as $tweet){
 		if(strstr(substr($text,0,2),'HT') != false){
 			continue;
 		}
+		elseif($text[0] == '&'){
+			continue;
+		}
 		else{
 			for($i = 0; $i < strlen($text); $i++){
 				if($text[$i] == '#' || $text[$i] == '.' || $text[$i] == '!' || $text[$i] == '?' || $text[$i] == '@' || $text[$i] == '(' || ($text[$i] == 'H' && $text[$i+1] == 'T')){
@@ -28,6 +31,5 @@ foreach($object->results as $tweet){
 			array_push($array, $text);
 	}
 }
-
 ?>
 
