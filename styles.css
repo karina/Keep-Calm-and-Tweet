@@ -23,6 +23,10 @@ div {
 	width: 200px;
 }
 
+#crown>img:hover {
+	cursor:pointer;
+}
+
 p {
 	margin: 10px;
 }

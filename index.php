@@ -6,7 +6,7 @@
 	<body>
 
 		<div id = "crown">
-			<img src= "crown.png" alt = "crown">
+			<img src= "crown.png" alt = "crown" onclick="window.location.reload()">
 		</div>
 
 		<div id = "keepcalm">
