@@ -19,17 +19,29 @@ foreach($object->results as $tweet){
 			continue;
 		}
 		else{
+
+
+			$pos = strlen($text);
+			if(($int = strpos($text, 'HT')) != false){
+				$text = substr($text,0,$int);
+			}
+			
 			for($i = 0; $i < strlen($text); $i++){
-				if($text[$i] == '#' || $text[$i] == '.' || $text[$i] == '!' || $text[$i] == '?' || $text[$i] == '@' || $text[$i] == '(' || ($text[$i] == 'H' && $text[$i+1] == 'T')){
-					$text = substr($text,0,-(strlen($text) - $i));
+				if (!ctype_alnum($text[$i]) && $text[$i] != ' ' && $text[$i] != ',' && $text[$i] != "'") {
+					$pos = $i;
 					break;
 				}
 			}
+
+			$text = substr($text, 0, $pos);
+			
 		}
 		$text = rtrim($text);
 		if($text != "")
 			array_push($array, $text);
 	}
+
 }
+
 ?>
 
